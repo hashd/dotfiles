@@ -1,0 +1,83 @@
+let mapleader=","
+set background=dark " dark background
+color Monokai       " Monokai ftw
+
+set hidden          " Hide buffers instead of closing them
+set mouse=a         " enable mouse
+set backspace=2     " Set backspace behaviour to normal
+set wrap            " don't wrap lines
+set ruler
+set number          " show line numbers
+set textwidth=0     " Dont hard line break
+set linebreak       " Line break on whitespaces only
+
+" space and tab settings
+set tabstop=4       " tab is 4 spaces
+set shiftwidth=4    " number of spaces to use for autoindenting
+set softtabstop=4   " when hitting backspace pretend like a tab is removed, even if spaces
+set shiftround
+set expandtab
+set smarttab
+set laststatus=2   " Always display the status line
+
+" Setting indentation rules
+set cindent         " cindent
+set autoindent      " always set autoindenting on
+set copyindent      " copy the previous indentation on autoindenting
+
+set showmatch       " set show matching parenthesis
+set list
+set listchars=tab:»·,trail:·,extends:#,nbsp:.
+
+set splitbelow
+set splitright
+
+set scrolloff=3
+set nocursorline
+set cindent
+set ttyfast         " smmother changes
+set modeline        " last lines in document sets vim mode
+set modelines=3     " 3 lines checked for modeline
+set matchpairs+=<:> " show matching <> (html mainly)
+set matchtime=3
+
+" Search options
+set hlsearch        " highlight search terms
+set incsearch       " show search matches as you type
+set ignorecase      " ignore case when searching
+set smartcase       " ignore case if search is all lowercase, else case sensitive
+
+" Change and undo history
+set history=1000    " remember more commands and search history
+set undolevels=1000 " use many levels of undo
+if v:version >= 730
+    set undofile
+    set undodir=~/.vim/.undo,~/.tmp/.vim/.undo
+endif
+
+set wildignore=*.swp,*.bak,*.class
+set title           " change the terminal's title
+set visualbell      " dont beep
+set novisualbell    " turn off visual bell
+set noerrorbells    " dont beep
+
+" completion
+set wildmenu
+set wildmode=list:full
+
+" disable backups while editing and saving
+set nobackup
+set nowritebackup
+set noswapfile
+
+" paste toggle - paste mode
+set pastetoggle=<F2>
+
+" filetype specific settings
+autocmd filetype javascript set noexpandtab
+autocmd filetype html,xml,javascript set listchars-=tab:»·
+
+" editor layout
+set termencoding=utf-8
+set encoding=utf-8
+set lazyredraw

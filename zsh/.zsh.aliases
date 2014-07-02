@@ -1,0 +1,7 @@
+#!/bin/zsh
+alias tmux='tmux -u -2'
+
+# Folder aliases
+alias lean='cd ~/Workspace/Imaginea/LeanTaaS/'
+alias github="cd ~/Workspace/Github/"
+alias mkh='lean;cd Development/mkh'
