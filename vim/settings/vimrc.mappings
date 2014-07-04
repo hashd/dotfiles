@@ -1,7 +1,25 @@
+" modifying leader key to ,
 let mapleader=","
+" disabling search highlights from previous search
+nnoremap i <esc>:noh<cr>i
+" remapping backslash key to , so that it can be used as leader key as well
 noremap \ ,
-
+" easy way to type commands by avoiding hitting the shift key
 nnoremap ; :
+
+" save close open mappings
+noremap ss :w<cr>
+noremap qa :qa!<cr>
+noremap qw :windo bd<cr>
+noremap qq :q<cr>
+
+" Ack/Quickfix windows
+noremap <leader>q :cclose<cr>
+noremap - :cprev<cr>zz
+noremap + :cnext<cr>zz
+noremap g- :cpfile<cr>zz
+noremap g+ :cnfile<cr>zv
+
 vnoremap Q gq
 nnoremap Q gqap
 
@@ -18,10 +36,10 @@ nnoremap <s-tab> <<
 vnoremap <tab> >
 vnoremap <s-tab> <
 
-" Save as root
+" Save options
 cmap w!! w !sudo tee % >/dev/null
 
-inoremap <C-<space>> <C-n>
+inoremap <C-space> <C-n>
 noremap <C-n> :tabnew<Cr>
 inoremap <C-n> <esc>:tabnew<cr>i
 nnoremap <leader>i :set list!<cr>
@@ -51,6 +69,10 @@ inoremap <C-w><down> <C-w>j
 inoremap <C-w><up> <C-w>k
 inoremap <C-w><right> <C-w>l
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader><left> :leftabove vsplit<cr>
+nnoremap <leader><right> :rightbelow vsplit<cr>
+nnoremap <leader><up> :leftabove split<cr>
+nnoremap <leader><down> :rightbelow split<cr>
 
 " Buffer navigation
 noremap <leader><leader> <C-^>
@@ -62,6 +84,7 @@ inoremap <C-b>h <esc>:bprev<CR>
 inoremap <C-b>l <esc>:bnext<CR>
 inoremap <C-b>j <esc>:brewind<CR>
 inoremap <C-b>k <esc>:brewind<CR>
+noremap <leader><leader> :b#<cr>
 
 " Tab navigation
 noremap <C-t>h :tabprev<CR>
@@ -73,11 +96,16 @@ inoremap <C-t>l <esc>:tabnext<CR>i
 inoremap <C-t>j <esc>:tabrewind<CR>i
 inoremap <C-t>k <esc>:tabrewind<CR>i
 
+noremap <S-Left> :tabp<cr>
+noremap <S-Right> :tabn<cr>
+inoremap <S-Left> :tabp<cr>
+inoremap <S-Right> :tabn<cr>
+
 " movement keys disabled
-" noremap <up> <nop>
-" noremap <down> <nop>
-" noremap <left> <nop>
-" noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 
 " Tagbar plugin mappings
 noremap <C-k><C-t> :TagbarToggle<CR>
@@ -85,4 +113,4 @@ noremap <C-k><C-t> :TagbarToggle<CR>
 " Mappings to edit and load vim settings
 nnoremap <silent> <leader>ev :tabe ~/.vimrc<CR>
 nnoremap <silent> <leader>sv :so ~/.vimrc<CR>:noh<CR>
-
+nnoremap <silent> <leader>ssv :w<cr>:so ~/.vimrc<cr>:noh<cr>

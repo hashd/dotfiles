@@ -1,11 +1,12 @@
 let mapleader=","
 set background=dark " dark background
-color Monokai       " Monokai ftw
+color kellys        " herald Tomorrow-Night-Eighties Monokai
 
 set hidden          " Hide buffers instead of closing them
 set mouse=a         " enable mouse
 set backspace=2     " Set backspace behaviour to normal
 set wrap            " don't wrap lines
+set nofoldenable
 set ruler
 set number          " show line numbers
 set textwidth=0     " Dont hard line break
@@ -26,13 +27,15 @@ set autoindent      " always set autoindenting on
 set copyindent      " copy the previous indentation on autoindenting
 
 set showmatch       " set show matching parenthesis
-set list
+set nolist
 set listchars=tab:»·,trail:·,extends:#,nbsp:.
 
 set splitbelow
 set splitright
 
 set scrolloff=3
+set sidescrolloff=10
+set sidescroll=1
 set nocursorline
 set cindent
 set ttyfast         " smmother changes
@@ -69,11 +72,13 @@ set wildmode=list:full
 set nobackup
 set nowritebackup
 set noswapfile
+set autoread
 
 " paste toggle - paste mode
 set pastetoggle=<F2>
 
 " filetype specific settings
+autocmd filetype md,markdown set nofoldenable
 autocmd filetype javascript set noexpandtab
 autocmd filetype html,xml,javascript set listchars-=tab:»·
 
@@ -81,3 +86,7 @@ autocmd filetype html,xml,javascript set listchars-=tab:»·
 set termencoding=utf-8
 set encoding=utf-8
 set lazyredraw
+
+" Corrections
+command! W w
+command! Wq wq

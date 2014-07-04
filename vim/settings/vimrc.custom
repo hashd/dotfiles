@@ -14,4 +14,13 @@ endfunction
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 
+function! GoyoBefore()
+    Limelight
+    setlocal nofoldenable
+endfunction
 
+function! GoyoAfter()
+    Limelight!
+endfunction
+
+let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
