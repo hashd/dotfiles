@@ -47,7 +47,7 @@ vim +PluginInstall +qall
 install_zsh
 
 # files to backup
-files="bashrc vimrc vim zshrc oh-my-zsh tmux.conf"
+files="bashrc vimrc vim zshrc oh-my-zsh tmux.conf gitconfig"
 
 # create backup folder for any old files
 echo "Creating $olddir for backup of any existing dotfiles in ~"

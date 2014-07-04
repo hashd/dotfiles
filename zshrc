@@ -73,8 +73,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-if [[ -f ~/.zsh.aliases ]]; then
-  source ~/.zsh.aliases
+if [[ -f ~/.zsh/zsh.aliases ]]; then
+  source ~/.zsh/zsh.aliases
 fi
 
 export TERM="xterm-256color"
