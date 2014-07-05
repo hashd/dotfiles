@@ -1,5 +1,6 @@
 set nocompatible    " be iMproved, required
 filetype off        " required
+set encoding=utf-8
 set t_Co=256        " set 256 colors mode
 
 " set the runtime path to include Vundle and initialize
@@ -27,4 +28,5 @@ endif
 
 let g:syntastic_check_on_open=1
 set t_ut=
+syntax on
 filetype plugin indent on
