@@ -1,3 +1,5 @@
+SETUP_DIR=$(pwd)
+
 # Clean directory structure
 cd ~
 mkdir Files
@@ -33,17 +35,20 @@ cd ~/.deb && wget http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-
 sudo apt-get install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386
 sudo apt-get -f install -y
 
-if [[ -f ubuntu/lists/ppas.list ]]; then
+cd $(SETUP_DIR)
+# Add PPA from list
+if [ -f ubuntu/lists/ppas.list ]; then
     while read PPA; do
         sudo apt-add-repository ppa:$PPA -y
-    done < ubuntu/ppas.list
+    done < ubuntu/lists/ppas.list
 fi
 sudo apt-get update
 
-if [[ -f ubuntu/lists/packages.list ]]; then
+# Install packages from list
+if [ -f ubuntu/lists/packages.list ]; then
     while read packages; do
         sudo apt-get install $packages -y
-    done < ubuntu/packages.list
+    done < ubuntu/lists/packages.list
 fi
 
 # Clean, Update, Upgrade!
