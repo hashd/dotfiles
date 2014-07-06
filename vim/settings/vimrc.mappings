@@ -102,10 +102,10 @@ inoremap <S-Left> :tabp<cr>
 inoremap <S-Right> :tabn<cr>
 
 " movement keys disabled
-noremap <up> <nop>
-noremap <down> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
+" noremap <up> <nop>
+" noremap <down> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
 
 " Tagbar plugin mappings
 noremap <C-k><C-t> :TagbarToggle<CR>

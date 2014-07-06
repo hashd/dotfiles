@@ -1,2 +1,5 @@
 vim/bundle/
+vim/undo/
+vim/backup/
+vim/swap/
 oh-my-zsh
