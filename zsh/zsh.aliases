@@ -5,3 +5,5 @@ alias tmux='tmux -u -2'
 alias lean='cd ~/Workspace/Imaginea/LeanTaaS/'
 alias github="cd ~/Workspace/Github/"
 alias mkh='lean;cd Development/mkh'
+
+alias reset="tput reset;clear;"
