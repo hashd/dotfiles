@@ -17,6 +17,7 @@ nnoremap <C-down> ddp
 nnoremap j gj
 nnoremap k gk
 nnoremap <C-d> dd
+nnoremap D d$
 nnoremap <leader>q :cclose<cr>
 nnoremap - :cprev<cr>zz
 nnoremap + :cnext<cr>zz
@@ -25,38 +26,44 @@ nnoremap g+ :cnfile<cr>zv
 nnoremap Q gqap
 nnoremap <C-n> :tabnew<cr>
 nnoremap <C-w> :tabclose<cr>
+nnoremap <leader>N :setlocal number!<cr>
+nnoremap <leader>I :setlocal list!<cr>
+nnoremap <leader>W :setlocal wrap!<cr>
+nnoremap <leader>p :silent! set paste<cr>"*p:set nopaste<cr>
+nnoremap / /\v
+nnoremap <tab> >>
+nnoremap <s-tab> <<
+nnoremap <C-b> :buffers<CR>
+nnoremap <C-k><C-b> :NERDTreeToggle<CR>
+nnoremap <C-k><C-t> :TagbarToggle<CR>
+nnoremap <leader>s vip:!sort<cr>
+nnoremap J mzJ'z
+nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
+nnoremap <leader>r :silent !ranger %:h<cr>:redraw!<cr>
+nnoremap <leader>R :silent !ranger<cr>:redraw!<cr>
 
 " Insert Mode Mappings 
 " -----------------------------------
 inoremap <C-space> <C-n>
+inoremap <C-n> <esc>:tabnew<cr>i
+inoremap <C-d> <esc>ddi
+inoremap <C-k><C-n> <esc>:NERDTreeToggle<cr>i
+inoremap <C-u> <esc>mzgUiw`za
 
-
-" Ack/Quickfix windows
-vnoremap Q gq
-
-" Searching
-nnoremap / /\v
+" Visual Mode Mappings
+" -----------------------------------
 vnoremap / /\v
-
-" Indentation mappings - not working yet
-nnoremap <tab> >>
-nnoremap <s-tab> <<
 vnoremap <tab> >
 vnoremap <s-tab> <
+vnoremap Q gq
+vnoremap <leader>s :!sort<cr>
 
-" Save options
-cmap w!! w !sudo tee % >/dev/null
+" Command Mode Mappings
+" ----------------------------------
+cnoremap w!! w !sudo tee % >/dev/null
 
-inoremap <C-n> <esc>:tabnew<cr>i
-nnoremap <leader>i :set list!<cr>
-nnoremap <leader>N :setlocal number!<cr>
-
-noremap <C-b> :buffers<CR>
-inoremap <C-d> <esc>ddi
-noremap <C-k><C-b> :NERDTreeToggle<CR>
 nnoremap <leader><space> :Goyo<CR>
 
-noremap <leader>i :set list!<CR>
 noremap <leader>n :setlocal number!<CR>
 
 " Easy window navigation
@@ -94,7 +101,6 @@ inoremap <S-Right> :tabn<cr>
 " noremap <right> <nop>
 
 " Tagbar plugin mappings
-noremap <C-k><C-t> :TagbarToggle<CR>
 
 " Mappings to edit and load vim settings
 nnoremap <silent> <leader>ev :tabe ~/.vimrc<CR>

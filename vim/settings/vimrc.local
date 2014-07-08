@@ -1,4 +1,5 @@
 let mapleader=","
+let maplocalleader="\\"
 set background=dark " dark background
 color Monokai        " herald Tomorrow-Night-Eighties Monokai
 
@@ -12,6 +13,8 @@ set number          " show line numbers
 set textwidth=0     " Dont hard line break
 set linebreak       " Line break on whitespaces only
 set showmode        " Always show editor mode
+set showcmd
+set shell=/usr/bin/zsh
 
 " space and tab settings
 set tabstop=4       " tab is 4 spaces
@@ -28,8 +31,8 @@ set autoindent      " always set autoindenting on
 set copyindent      " copy the previous indentation on autoindenting
 
 set showmatch       " set show matching parenthesis
-set nolist
-set listchars=tab:»·,trail:·,extends:#,nbsp:.
+set nolist          " Do not show list characters`
+set listchars=trail:·,nbsp:.,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
 set splitbelow
 set splitright
@@ -59,7 +62,6 @@ if v:version >= 730
     set undodir=~/.vim/undo,~/.tmp/.vim/undo
 endif
 
-set wildignore=*.swp,*.bak,*.class
 set title           " change the terminal's title
 set visualbell      " dont beep
 set novisualbell    " turn off visual bell
@@ -68,12 +70,18 @@ set noerrorbells    " dont beep
 " completion
 set wildmenu
 set wildmode=list:full
+set wildignore+=.hg,.git,.svn,*.orig
+set wildignore=*.swp,*.bak,*.class
+set wildignore+=*.out,*.o,*.class,*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.luac,*.DS_Store,*.sw
 set clipboard+=unnamed
 
 " disable backups while editing and saving
 set nobackup
+set backupdir=~/.vim/backup/
 set nowritebackup
 set noswapfile
+set directory=~/.vim/swap/
 set autoread
 
 " paste toggle - paste mode

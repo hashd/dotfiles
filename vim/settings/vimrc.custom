@@ -14,6 +14,34 @@ endfunction
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 
+" Save on losing focus
+autocmd FocusLost * :silent! wall
+
+" Cursorline, show only in the current window and in normal mode
+augroup crsrlne
+    au!
+    au WinLeave,InsertEnter * set nocursorline
+    au WinEnter,InsertLeave * set cursorline
+augroup end
+
+" Make sure Vim returns to the same line when you reopen a file.
+augroup line_return
+    au!
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute 'normal! g`"zvzz' |  endif
+augroup END
+
+" Make backup, swap and undo directories if they dont exist
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+    call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+    call mkdir(expand(&directory), "p")
+endif
+
+" Lime Light Integration
 function! GoyoBefore()
     Limelight
     setlocal nofoldenable
