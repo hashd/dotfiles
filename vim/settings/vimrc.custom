@@ -45,10 +45,12 @@ endif
 function! GoyoBefore()
     Limelight
     setlocal nofoldenable
+    let g:ycm_auto_trigger = 0
 endfunction
 
 function! GoyoAfter()
     Limelight!
+    let g:ycm_auto_trigger = 1
 endfunction
 
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
