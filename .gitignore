@@ -2,4 +2,5 @@ vim/bundle/
 vim/undo/
 vim/backup/
 vim/swap/
+zsh/cache/
 oh-my-zsh
