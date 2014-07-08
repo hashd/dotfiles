@@ -7,3 +7,10 @@ alias github="cd ~/Workspace/Github/"
 alias mkh='lean;cd Development/mkh'
 
 alias reset="tput reset;clear;"
+
+# apt-get aliases
+alias install="sudo apt-get install"
+alias upgrade="sudo apt-get upgrade"
+alias remove="sudo apt-get remove"
+alias update="sudo apt-get update"
+alias dist-upgrade="sudo apt-get dist-upgrade"

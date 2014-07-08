@@ -493,7 +493,7 @@ SCHEME=$1
 if [ -z $1 ]; then
     echo "Pick a color scheme:"
     PS3="Choose:"
-    select SCHEME in "Blazer" "Chalkboard" "Cobalt2" "DarkPastel" "Desert" "Espresso" "Github" "Grass" "Harper" "Homebrew" "Hurtado" "Hybrid" "idleToes" "IR_Black" "Jellybeans" "Kibble" "LiquidCarbon" "LiquidCarbonTransparentInverse" "LiquidCarbonTransparent" "ManPage" "Mathias" "Misterioso" "Molokai" "MonokaiSoda" "Neopolitan" "NightLionv1" "NightLionv2" "Novel" "Obsidian" "Ocean" "PaulMillr" "Pro" "RedAlert" "Red" "Sands" "SeafoamPastel" "Smyck" "SolarizedDarcula" "SolarizedDark" "SolarizedLight" "SpaceGray" "Spring" "Symfonic" "Teerb" "TerminalBasic" "ThayerBright" "Tomorrow" "TomorrowNightBlue" "TomorrowNightBright" "TomorrowNightEighties" "TomorrowNight" "Twilight" "Vaughn" "WarmNeon" "Zenburn"
+    select SCHEME in "Blazer" "Chalkboard" "Cobalt2" "DarkPastel" "Desert" "Espresso" "Github" "Grass" "Harper" "Homebrew" "Hurtado" "Hybrid" "idleToes" "IR_Black" "Jellybeans" "Kibble" "LiquidCarbon" "LiquidCarbonTransparentInverse" "LiquidCarbonTransparent" "ManPage" "Mathias" "Misterioso" "Molokai" "MonokaiSoda" "Neopolitan" "NightLionv1" "NightLionv2" "Novel" "Obsidian" "Ocean" "PaulMillr" "Pro" "RedAlert" "RedSands" "SeafoamPastel" "Smyck" "SolarizedDarcula" "SolarizedDark" "SolarizedLight" "SpaceGray" "Spring" "Symfonic" "Teerb" "TerminalBasic" "ThayerBright" "Tomorrow" "TomorrowNightBlue" "TomorrowNightBright" "TomorrowNightEighties" "TomorrowNight" "Twilight" "Vaughn" "WarmNeon" "Zenburn"
     do
         break
     done

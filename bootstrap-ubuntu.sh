@@ -11,7 +11,7 @@ cleanDefaultDirectories() {
     mkdir ~/.tmp
     mkdir -p ~/Workspace/Backyard
     mkdir -p ~/Workspace/Github
-    mkdir -p ~/Workspace/Whiteboard
+    mkdir -p ~/Workspace/CodePool
     mkdir -p ~/Files/eBooks
     mkdir -p ~/Files/Notes
     mkdir -p ~/Workspace/Tools
@@ -42,7 +42,7 @@ install3rdPartySoftware() {
     sudo apt-get -f install -y
 }
 
-addPpaAndInstallSoftware() {
+addPpaAndInstallAdditionalSoftware() {
     cd $(SETUP_DIR)
     # Add PPA from list
     if [ -f ubuntu/lists/ppas.list ]; then
@@ -63,7 +63,10 @@ addPpaAndInstallSoftware() {
 cleanDefaultDirectories
 installUbuntuExtras
 install3rdPartySoftware
-addPpaAndInstallSoftware
+addPpaAndInstallAdditionalSoftware
 
 # Clean, Update, Upgrade!
 sudo apt-get autoremove -y && sudo apt-get update && sudo apt-get upgrade -y
+
+echo "Setting zsh as default shell, (reboot to see changes)"
+chsh -s $(which zsh)
