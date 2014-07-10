@@ -41,6 +41,9 @@ if !isdirectory(expand(&directory))
     call mkdir(expand(&directory), "p")
 endif
 
+" Set vim current directory to the directory that the file in the current buffer is in
+" autocmd BufEnter * :lcd %:p:h
+
 " Lime Light Integration
 function! GoyoBefore()
     Limelight
@@ -54,3 +57,6 @@ function! GoyoAfter()
 endfunction
 
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+
+" Markdown features
+let g:vim_markdown_folding_disabled=1

@@ -7,17 +7,42 @@ noremap \ ,
 
 " Normal Mode Mappings
 " ----------------------------------
+
+" Pardon me for not hitting the shift key on ;
 nnoremap ; :
+
+" Save current buffer
 nnoremap ss :w<cr>
+
+" Save all buffers
+nnoremap SS :wa!<cr>
+
+" Quit all, dont ask for my permission
 nnoremap qa :qa!<cr>
+
+" Quit all buffers in window
 nnoremap qw :windo bd<cr>
+
+" Quit current buffer
 nnoremap qq :q<cr>
+
+" Move line up, needs correction
 nnoremap <C-up> ddkP
+
+" Move line down, needs correction
 nnoremap <C-down> ddp
+
+" Take line breaks into consideration while moving up and down
 nnoremap j gj
 nnoremap k gk
+
+" Delete line
 nnoremap <C-d> dd
+
+" Delete till end of line
 nnoremap D d$
+
+
 nnoremap <leader>q :cclose<cr>
 nnoremap - :cprev<cr>zz
 nnoremap + :cnext<cr>zz
@@ -30,17 +55,23 @@ nnoremap <leader>N :setlocal number!<cr>
 nnoremap <leader>I :setlocal list!<cr>
 nnoremap <leader>W :setlocal wrap!<cr>
 nnoremap <leader>p :silent! set paste<cr>"*p:set nopaste<cr>
+nnoremap H :set hlsearch!<cr>
 nnoremap / /\v
 nnoremap <tab> >>
-nnoremap <s-tab> <<
+nnoremap <S-tab> <<
 nnoremap <C-b> :buffers<CR>
 nnoremap <C-k><C-b> :NERDTreeToggle<CR>
 nnoremap <C-k><C-t> :TagbarToggle<CR>
 nnoremap <leader>s vip:!sort<cr>
+nnoremap <leader>e :e <C-R>=expand("%:p:h") <cr>
 nnoremap J mzJ'z
 nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
 nnoremap <leader>r :silent !ranger %:h<cr>:redraw!<cr>
 nnoremap <leader>R :silent !ranger<cr>:redraw!<cr>
+nnoremap fb j[[zfaB
+nnoremap fc j[*zf]*
+nnoremap fm zf'a
+nnoremap fd zd
 
 " Insert Mode Mappings 
 " -----------------------------------
