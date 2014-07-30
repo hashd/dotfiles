@@ -50,7 +50,8 @@ nnoremap g- :cpfile<cr>zz
 nnoremap g+ :cnfile<cr>zv
 nnoremap Q gqap
 nnoremap <C-n> :tabnew<cr>
-nnoremap <C-w> :tabclose<cr>
+nnoremap <C-v> :vsplit<cr><C-w>l
+nnoremap <C-s> :split<cr><C-w>j
 nnoremap <leader>N :setlocal number!<cr>
 nnoremap <leader>I :setlocal list!<cr>
 nnoremap <leader>W :setlocal wrap!<cr>
@@ -72,6 +73,21 @@ nnoremap fb j[[zfaB
 nnoremap fc j[*zf]*
 nnoremap fm zf'a
 nnoremap fd zd
+nnoremap <leader><space> :Goyo<CR>
+nnoremap <leader>n<left> :leftabove vsplit<cr>
+nnoremap <leader>n<right> :rightbelow vsplit<cr>
+nnoremap <leader>n<up> :leftabove split<cr>
+nnoremap <leader>n<down> :rightbelow split<cr>
+nnoremap <C-t>h :tabprev<CR>
+nnoremap <C-t>l :tabnext<CR>
+nnoremap <C-t>j :tabrewind<CR>
+nnoremap <C-t>k :tabrewind<CR>
+nnoremap <C-Left> :tabp<cr>
+nnoremap <C-Right> :tabn<cr>
+nnoremap <M-left> <C-w>h
+nnoremap <M-right> <C-w>l
+nnoremap <M-up> <C-w>k
+nnoremap <M-down> <C-w>j
 
 " Insert Mode Mappings 
 " -----------------------------------
@@ -80,6 +96,8 @@ inoremap <C-n> <esc>:tabnew<cr>i
 inoremap <C-d> <esc>ddi
 inoremap <C-k><C-n> <esc>:NERDTreeToggle<cr>i
 inoremap <C-u> <esc>mzgUiw`za
+inoremap <C-Left> :tabp<cr>
+inoremap <C-Right> :tabn<cr>
 
 " Visual Mode Mappings
 " -----------------------------------
@@ -93,18 +111,11 @@ vnoremap <leader>s :!sort<cr>
 " ----------------------------------
 cnoremap w!! w !sudo tee % >/dev/null
 
-nnoremap <leader><space> :Goyo<CR>
-
-noremap <leader>n :setlocal number!<CR>
 
 " Easy window navigation
 " split window vertically <C-w>v
 " split window horizontally <C-w>s
 nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <leader>n<left> :leftabove vsplit<cr>
-nnoremap <leader>n<right> :rightbelow vsplit<cr>
-nnoremap <leader>n<up> :leftabove split<cr>
-nnoremap <leader>n<down> :rightbelow split<cr>
 
 " Buffer navigation
 noremap <leader><leader> <C-^>
@@ -115,15 +126,6 @@ noremap <C-b>k :brewind<CR>
 noremap <leader><leader> :b#<cr>
 
 " Tab navigation
-noremap <C-t>h :tabprev<CR>
-noremap <C-t>l :tabnext<CR>
-noremap <C-t>j :tabrewind<CR>
-noremap <C-t>k :tabrewind<CR>
-
-noremap <S-Left> :tabp<cr>
-noremap <S-Right> :tabn<cr>
-inoremap <S-Left> :tabp<cr>
-inoremap <S-Right> :tabn<cr>
 
 " movement keys disabled
 " noremap <up> <nop>

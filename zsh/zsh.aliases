@@ -14,3 +14,6 @@ alias upgrade="sudo apt-get upgrade"
 alias remove="sudo apt-get remove"
 alias update="sudo apt-get update"
 alias dist-upgrade="sudo apt-get dist-upgrade"
+alias uptodate="update && upgrade"
+
+alias pfind="ps -ef | grep"
