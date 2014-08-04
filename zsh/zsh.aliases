@@ -17,3 +17,7 @@ alias dist-upgrade="sudo apt-get dist-upgrade"
 alias uptodate="update && upgrade"
 
 alias pfind="ps -ef | grep"
+
+alias fs="fortune -s"
+alias fl="fortune -l"
+alias tf="typefortune -s -n "

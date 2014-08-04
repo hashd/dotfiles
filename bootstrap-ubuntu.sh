@@ -58,6 +58,13 @@ addPpaAndInstallAdditionalSoftware() {
             sudo apt-get install $packages -y
         done < ubuntu/lists/packages.list
     fi
+
+    # Install python packages from list
+    if [ -f ubuntu/lists/python-packages.list ]; then
+        while read package; do
+            sudo pip install $package -y
+        done < ubuntu/lists/python-packages.list
+    fi
 }
 
 cleanDefaultDirectories
