@@ -86,3 +86,6 @@ if [[ -f ~/zsh/local/zsh.settings ]]; then
 fi
 
 export TERM="xterm-256color"
+
+# Print a fortune
+fortune
