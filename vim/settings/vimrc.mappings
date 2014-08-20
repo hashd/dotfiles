@@ -98,6 +98,7 @@ inoremap <C-k><C-n> <esc>:NERDTreeToggle<cr>i
 inoremap <C-u> <esc>mzgUiw`za
 inoremap <C-Left> :tabp<cr>
 inoremap <C-Right> :tabn<cr>
+inoremap {<CR> {<CR>}<Esc>O
 
 " Visual Mode Mappings
 " -----------------------------------

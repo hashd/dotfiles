@@ -46,7 +46,7 @@ install_vundle
 vim +PluginInstall +qall
 install_zsh
 
-# files to backup
+# files to backup and symlink
 files="bashrc vimrc vim zshrc oh-my-zsh zsh tmux.conf gitconfig"
 
 # create backup folder for any old files

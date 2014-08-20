@@ -56,6 +56,7 @@ function! GoyoAfter()
     let g:ycm_auto_trigger = 1
 endfunction
 
+let g:goyo_width = 100
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 
 " Markdown features
