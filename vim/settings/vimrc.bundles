@@ -26,5 +26,6 @@ Plugin 'junegunn/goyo.vim' " Distraction free writing within vim
 Plugin 'majutsushi/tagbar'
 Plugin 'pangloss/vim-javascript'
 Plugin 'junegunn/limelight.vim'
+Plugin 'wting/rust.vim'
 " Plugin 'szw/vim-ctrlspace'
 Plugin 'ervandew/supertab'

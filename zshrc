@@ -77,11 +77,11 @@ if [[ -f ~/.zsh/zsh.aliases ]]; then
   source ~/.zsh/zsh.aliases
 fi
 
-if [[ -f ~/zsh/local/zsh.aliases ]]; then
+if [[ -f ~/.zsh/local/zsh.aliases ]]; then
     source ~/.zsh/local/zsh.aliases
 fi
 
-if [[ -f ~/zsh/local/zsh.settings ]]; then
+if [[ -f ~/.zsh/local/zsh.settings ]]; then
     source ~/.zsh/local/zsh.settings
 fi
 
