@@ -1,5 +1,6 @@
 #!/bin/zsh
 alias tmux='tmux -u -2'
+alias home='cd ~'
 
 # Folder aliases
 alias lean='cd ~/Workspace/Imaginea/LeanTaaS/'

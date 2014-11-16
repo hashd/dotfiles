@@ -15,7 +15,7 @@ ZSH_THEME="jnrowe"
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -48,7 +48,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,7 +74,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 if [[ -f ~/.zsh/zsh.aliases ]]; then
-  source ~/.zsh/zsh.aliases
+    source ~/.zsh/zsh.aliases
+fi
+
+if [[ -f ~/.zsh/zsh.funcs ]]; then
+    source ~/.zsh/zsh.funcs
 fi
 
 if [[ -f ~/.zsh/local/zsh.aliases ]]; then

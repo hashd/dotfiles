@@ -1,0 +1,15 @@
+function todoe {
+vim ~/Sync/Dropbox/Notes/TODO/$1.md
+}
+
+function todos {
+ls -c ~/Sync/Dropbox/Notes/TODO | grep $1
+}
+
+function todo {
+if [[ -f ~/Sync/Dropbox/Notes/TODO/$1.md ]]; then
+    cat ~/Sync/Dropbox/Notes/TODO/$1.md
+else
+    echo "No todos found for $1"
+fi
+}
