@@ -9,6 +9,7 @@ cleanDefaultDirectories() {
     mkdir ~/Workspace
     mkdir ~/.deb
     mkdir ~/.tmp
+    mkdir ~/.git-repos
     mkdir -p ~/Workspace/Backyard
     mkdir -p ~/Workspace/Github
     mkdir -p ~/Workspace/CodePool
