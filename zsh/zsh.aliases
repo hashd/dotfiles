@@ -3,11 +3,8 @@ alias tmux='tmux -u -2'
 alias home='cd ~'
 
 # Folder aliases
-alias lean='cd ~/Workspace/Imaginea/LeanTaaS/'
-alias github="cd ~/Workspace/Github/"
-alias mkh='lean;cd Development/mkh'
-
 alias reset="tput reset;clear;"
+alias serve="python -m SimpleHTTPServer"
 
 # apt-get aliases
 alias install="sudo apt-get install"
