@@ -28,5 +28,5 @@ endif
 
 let g:syntastic_check_on_open=1
 set t_ut=
-syntax on
+syntax enable on
 filetype plugin indent on

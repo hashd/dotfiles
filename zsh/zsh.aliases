@@ -3,9 +3,9 @@ alias tmux='tmux -u -2'
 alias home='cd ~'
 
 # Folder aliases
-alias lean='cd ~/Workspace/Imaginea/LeanTaaS/'
-alias github="cd ~/Workspace/Github/"
-alias mkh='lean;cd Development/mkh'
+alias lean='cd ~/leantaas'
+alias github="cd ~/code/github/"
+alias mkh='lean;cd communities/mkh'
 
 alias reset="tput reset;clear;"
 

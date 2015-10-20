@@ -1,30 +1,21 @@
+#!/bin/bash
 SETUP_DIR=$(pwd)
 
 # Clean directory structure
 cleanDefaultDirectories() {
-    mkdir ~/Files
-    mkdir ~/Media
-    mkdir ~/Other
-    mkdir ~/Sync
-    mkdir ~/Workspace
+    mkdir ~/files
+    mkdir ~/media
+    mkdir ~/code
     mkdir ~/.deb
     mkdir ~/.tmp
     mkdir ~/.git-repos
-    mkdir -p ~/Workspace/Backyard
-    mkdir -p ~/Workspace/Github
-    mkdir -p ~/Workspace/CodePool
-    mkdir -p ~/Files/eBooks
-    mkdir -p ~/Files/Notes
-    mkdir -p ~/Workspace/Tools
-    mkdir -p ~/Sync/Google-Drive
+    mkdir -p ~/code/github
 
-    mv ~/Pictures ~/Media/
-    mv ~/Music ~/Media/
-    mv ~/Videos ~/Media/
-    mv ~/Desktop ~/Files/
-    mv ~/Documents ~/Files/
-    mv ~/Templates ~/Other/
-    mv ~/Public ~/Other/
+    mv ~/Pictures ~/media/
+    mv ~/Music ~/media/
+    mv ~/Videos ~/media/
+    mv ~/Desktop ~/files/
+    mv ~/Documents ~/files/
 }
 
 installUbuntuExtras() {
