@@ -1,7 +1,8 @@
 let mapleader=","
 let maplocalleader="\\"
 set background=dark " dark background
-color Monokai        " herald Tomorrow-Night-Eighties Monokai
+syntax enable
+colorscheme Monokai        " herald Tomorrow-Night-Eighties Monokai
 
 set hidden          " Hide buffers instead of closing them
 set mouse=a         " enable mouse
