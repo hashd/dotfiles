@@ -3,19 +3,18 @@ SETUP_DIR=$(pwd)
 
 # Clean directory structure
 cleanDefaultDirectories() {
-    mkdir ~/files
+    mkdir ~/local
     mkdir ~/media
     mkdir ~/code
     mkdir ~/.deb
     mkdir ~/.tmp
     mkdir ~/.git-repos
-    mkdir -p ~/code/github
 
     mv ~/Pictures ~/media/
     mv ~/Music ~/media/
     mv ~/Videos ~/media/
-    mv ~/Desktop ~/files/
-    mv ~/Documents ~/files/
+    mv ~/Desktop ~/local/
+    mv ~/Documents ~/local/
 }
 
 installUbuntuExtras() {
@@ -35,19 +34,19 @@ install3rdPartySoftware() {
 }
 
 addPpaAndInstallAdditionalSoftware() {
-    cd $(SETUP_DIR)
+    cd $SETUP_DIR
     # Add PPA from list
     if [ -f ubuntu/lists/ppas.list ]; then
-        while read PPA; do
-            sudo apt-add-repository ppa:$PPA -y
-        done < ubuntu/lists/ppas.list
+       while read PPA; do
+           sudo apt-add-repository ppa:$PPA -y
+       done < ubuntu/lists/ppas.list
     fi
     sudo apt-get update
 
     # Install packages from list
     if [ -f ubuntu/lists/packages.list ]; then
         while read packages; do
-            sudo apt-get install $packages -y
+            sudo apt-get install $packages -y --force-yes
         done < ubuntu/lists/packages.list
     fi
 
