@@ -81,6 +81,11 @@ if [[ -f ~/.zsh/zsh.funcs ]]; then
     source ~/.zsh/zsh.funcs
 fi
 
+# Load local zshrc file, if present
+if [[ -f ~/.zsh/local/zshrc ]]; then
+    source ~/.zsh/local/zshrc
+fi
+
 if [[ -f ~/.zsh/local/zsh.aliases ]]; then
     source ~/.zsh/local/zsh.aliases
 fi
