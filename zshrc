@@ -96,11 +96,12 @@ fi
 
 export TERM="xterm-256color"
 
-# Print a fortune
-fortune
 
 export NVM_DIR="/home/kd/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"
 
 export GVM_DIR="/home/kd/.gvm"
 [[ -s "$GVM_DIR/scripts/gvm" ]] && source "$GVM_DIR/scripts/gvm"
+
+# Print a fortune
+fortune
