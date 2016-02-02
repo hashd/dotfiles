@@ -42,24 +42,43 @@ nnoremap <C-d> dd
 " Delete till end of line
 nnoremap D d$
 
-
+" Close the quick fix window
 nnoremap <leader>q :cclose<cr>
+
+" Goto prev error
 nnoremap - :cprev<cr>zz
+
+" Goto next error
 nnoremap + :cnext<cr>zz
 nnoremap g- :cpfile<cr>zz
 nnoremap g+ :cnfile<cr>zv
 nnoremap Q gqap
+
+" Create new tab
 nnoremap <C-n> :tabnew<cr>
 nnoremap <C-v> :vsplit<cr><C-w>l
 nnoremap <C-s> :split<cr><C-w>j
+
+" Toggle to switch numbers on and off
 nnoremap <leader>N :setlocal number!<cr>
+
+" Toggle to switch list characters on and off
 nnoremap <leader>I :setlocal list!<cr>
+
+" Toggle to switch wrap on and off
 nnoremap <leader>W :setlocal wrap!<cr>
+
+" leader p to paste with indents intact
 nnoremap <leader>p :silent! set paste<cr>"*p:set nopaste<cr>
+
+" Toggle to switch search highlight on and off
 nnoremap H :set hlsearch!<cr>
+
+" Improved search by default
 nnoremap / /\v
-nnoremap <tab> >>
-nnoremap <S-tab> <<
+
+" nnoremap <tab> >>
+" nnoremap <S-tab> <<
 nnoremap <C-b> :buffers<CR>
 nnoremap <C-k><C-b> :NERDTreeToggle<CR>
 nnoremap <C-k><C-t> :TagbarToggle<CR>

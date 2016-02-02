@@ -15,7 +15,6 @@ set textwidth=0     " Dont hard line break
 set linebreak       " Line break on whitespaces only
 set showmode        " Always show editor mode
 set showcmd
-set shell=/usr/bin/zsh
 
 " space and tab settings
 set tabstop=4       " tab is 4 spaces
