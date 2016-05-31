@@ -4,3 +4,9 @@
 
 [core]
     editor = vim
+
+[http]
+    sslverify = false
+
+[credential]
+    helper = store
