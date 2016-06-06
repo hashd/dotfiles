@@ -13,3 +13,20 @@ else
     echo "No todos found for $1"
 fi
 }
+
+function record {
+    base_path="$HOME/.recordings"
+    if [ -z "$1" ]; then
+        now=$(date +"%m_%d_%Y")
+        file_name="$base_path/recording_$now.mp4"
+    else
+        file_name="$base_path/$1"
+    fi
+
+    vlc \
+        screen:// --one-instance \
+        -I dummy --extraintf rc --rc-host localhost:10082 \
+        --screen-follow-mouse \
+        --no-video :screen-fps=15 :screen-caching=300 \
+        --sout "#transcode{vcodec=h264,vb=800,fps=5,scale=1,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=$file_name}}"
+}
