@@ -50,8 +50,6 @@ ZSH_THEME="sonicradish"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history-substring-search command-not-found)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
@@ -104,6 +102,8 @@ export GVM_DIR="$HOME/.gvm"
 
 export RVM_DIR="$HOME/.rvm"
 [[ -s "$RVM_DIR/scripts/rvm" ]] && source "$RVM_DIR/scripts/rvm"
+
+source $ZSH/oh-my-zsh.sh
 
 # Print a fortune
 fortune
