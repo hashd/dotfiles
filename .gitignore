@@ -5,3 +5,4 @@ vim/swap/
 zsh/cache/
 zsh/local/
 oh-my-zsh
+.DS_Store
