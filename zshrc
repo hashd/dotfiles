@@ -48,7 +48,7 @@ ZSH_THEME="sonicradish"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search command-not-found)
+plugins=(git history-substring-search command-not-found z)
 
 # User configuration
 
@@ -102,6 +102,9 @@ export GVM_DIR="$HOME/.gvm"
 
 export RVM_DIR="$HOME/.rvm"
 [[ -s "$RVM_DIR/scripts/rvm" ]] && source "$RVM_DIR/scripts/rvm"
+
+export SCALA_HOME="/usr/local/share/scala"
+[[ -d "$SCALA_HOME" ]] && export PATH=$PATH:$SCALA_HOME/bin
 
 source $ZSH/oh-my-zsh.sh
 
