@@ -18,14 +18,11 @@ function install_brew_bundle() {
 }
 
 function install_languages() {
-  echo "Installing Elixir"
-  brew install elixir
-
   echo "Installing Go version manager"
   zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
   gvm install go1.4 -B && gvm use go1.4
   gvm install go1.7 && gvm use go1.7 --default
 }
 
-# install_essentials
+install_essentials
 install_brew_bundle

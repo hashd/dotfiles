@@ -18,6 +18,7 @@ brew "htop"
 brew "jq"
 brew "micro"
 brew "nginx", restart_service: false
+brew "nvm"
 brew "sqlite"
 brew "python"
 brew "python3"
