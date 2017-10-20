@@ -5,12 +5,16 @@ function install_essentials() {
 
   echo "Installing homebrew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
 
-  echo "Installing zsh"
-  brew install zsh
-
+function setup_basics() {
   echo "Setting zsh as default shell, provide password if prompted"
   chsh -s /bin/zsh
+}
+
+function install_brew_bundle() {
+  echo "Installing brew and cask applications from Brewfile"
+  brew bundle
 }
 
 function install_languages() {
@@ -23,4 +27,5 @@ function install_languages() {
   gvm install go1.7 && gvm use go1.7 --default
 }
 
-install_essentials
+# install_essentials
+install_brew_bundle
