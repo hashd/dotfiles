@@ -106,5 +106,7 @@ export RVM_DIR="$HOME/.rvm"
 export SCALA_HOME="/usr/local/share/scala"
 [[ -d "$SCALA_HOME" ]] && export PATH=$PATH:$SCALA_HOME/bin
 
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
 source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
