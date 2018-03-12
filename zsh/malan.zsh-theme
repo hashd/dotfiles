@@ -1,13 +1,13 @@
 if [[ -n $SSH_CONNECTION ]]; then
-	local host='@%m'
+	local host='⟛ %m'
 else
-   	local host='@⌘'
+	local host='⬩ ⌂'
 fi
 
 local ret_status="%(?:%{$fg_bold[magenta]%}[ %{$fg_bold[green]%}⬢:%{$fg_bold[red]%}[ ⬢%s)"
 local r_ret_status="%(?:%{$fg_bold[green]%}⬢%{$fg_bold[magenta]%} ]:%{$fg_bold[red]%}⬢ ]%s)"
 PROMPT=$'
-%{$fg[green]%}%n${host} ➛ %{$reset_color%}%{$fg[red]%}%2d %{$reset_color%} %{$reset_color%}
+%{$fg[green]%}%n ${host} ⬩ %{$reset_color%}%{$fg[red]%}%2d %{$reset_color%} %{$reset_color%}
 ${ret_status} %{$reset_color%} '
 RPROMPT='$(git_prompt_status)%{$reset_color%} %{$fg[magenta]%}$(git_prompt_info) ${r_ret_status}%{$reset_color%}'
 
