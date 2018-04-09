@@ -48,7 +48,7 @@ ZSH_CUSTOM=$HOME/.zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search command-not-found z)
+plugins=(git history-substring-search command-not-found)
 
 # User configuration
 
@@ -107,6 +107,8 @@ export SCALA_HOME="/usr/local/share/scala"
 [[ -d "$SCALA_HOME" ]] && export PATH=$PATH:$SCALA_HOME/bin
 
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+export ZSH_THEME="malan"
 
 source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

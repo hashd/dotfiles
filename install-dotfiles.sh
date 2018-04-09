@@ -29,21 +29,10 @@ fi
 }
 
 install_vundle () {
-if [ -f /bin/git -o -f /usr/bin/git ]; then
-    if [[ ! -d $dir/vim/bundle/Vundle.vim ]]; then
-        git clone https://github.com/gmarik/Vundle.vim.git $dir/vim/bundle/Vundle.vim
-    fi
-else
-    platform=$(uname);
-    if [[ $platform == 'Linux' ]]; then
-        sudo apt-get install git
-        install_vundle
-    fi
-fi
+    git clone https://github.com/gmarik/Vundle.vim.git $dir/vim/bundle/Vundle.vim
 }
 
 install_vundle
-vim +PluginInstall +qall
 install_zsh
 
 # files to backup and symlink
@@ -66,3 +55,5 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# Install vim plugins at the end
+vim +PluginInstall +qall
