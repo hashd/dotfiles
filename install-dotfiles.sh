@@ -7,7 +7,7 @@ install_zsh () {
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Clone my oh-my-zsh repository from GitHub only if it isn't already present
     if [[ ! -d $dir/oh-my-zsh/ ]]; then
-        git clone http://github.com/robbyrussell/oh-my-zsh.git
+        cd confs && git clone http://github.com/robbyrussell/oh-my-zsh.git && cd -
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
@@ -32,8 +32,8 @@ install_vundle () {
     git clone https://github.com/gmarik/Vundle.vim.git $dir/vim/bundle/Vundle.vim
 }
 
-install_vundle
-install_zsh
+# install_vundle
+# install_zsh
 
 # files to backup and symlink
 files="bashrc vimrc vim zshrc oh-my-zsh zsh tmux.conf gitconfig"
@@ -52,8 +52,8 @@ for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file $olddir/ 2>/dev/null
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    ln -s $dir/confs/$file ~/.$file
 done
 
 # Install vim plugins at the end
-vim +PluginInstall +qall
+# vim +PluginInstall +qall

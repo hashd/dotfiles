@@ -1,8 +1,8 @@
-vim/bundle/
-vim/undo/
-vim/backup/
-vim/swap/
-zsh/cache/
-zsh/local/
-oh-my-zsh
+confs/vim/bundle/
+confs/vim/undo/
+confs/vim/backup/
+confs/vim/swap/
+confs/zsh/cache/
+confs/zsh/local/
+confs/oh-my-zsh
 .DS_Store

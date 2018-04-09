@@ -14,7 +14,7 @@ function setup_basics() {
 
 function install_brew_bundle() {
   echo "Installing brew and cask applications from Brewfile"
-  brew bundle
+  brew bundle --file=osx/Brewfile
 }
 
 function install_languages() {
