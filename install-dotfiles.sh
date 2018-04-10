@@ -29,11 +29,11 @@ fi
 }
 
 install_vundle () {
-    git clone https://github.com/gmarik/Vundle.vim.git $dir/vim/bundle/Vundle.vim
+    git clone https://github.com/gmarik/Vundle.vim.git $dir/confs/vim/bundle/Vundle.vim
 }
 
-# install_vundle
-# install_zsh
+install_vundle
+install_zsh
 
 # files to backup and symlink
 files="bashrc vimrc vim zshrc oh-my-zsh zsh tmux.conf gitconfig"
@@ -56,4 +56,4 @@ for file in $files; do
 done
 
 # Install vim plugins at the end
-# vim +PluginInstall +qall
+vim +PluginInstall +qall

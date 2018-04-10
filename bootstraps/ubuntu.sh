@@ -85,6 +85,7 @@ addPpaAndInstallAdditionalSoftware() {
 
 cleanDefaultDirectories
 installUbuntuExtras
+setDefaultDirectories
 # install3rdPartySoftware
 # addPpaAndInstallAdditionalSoftware
 
