@@ -4,5 +4,6 @@ confs/vim/backup/
 confs/vim/swap/
 confs/zsh/cache/
 confs/zsh/local/
+confs/zsh/plugins/
 confs/oh-my-zsh
 .DS_Store
